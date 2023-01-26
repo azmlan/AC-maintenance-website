@@ -53,7 +53,7 @@ a:hover{
 }
 .content-container{
     display: flex;
-    height: 700px;
+    /* height: 700px; */
 }
 .content-container .right-side{
     max-width: 50%;

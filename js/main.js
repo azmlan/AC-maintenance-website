@@ -10,6 +10,9 @@ showForm.addEventListener('click', () => {
         contentDescription.style.cssText = 'opacity:0; transition:0.2s;';
         showForm.style.cssText = 'opacity:0; transition:0.2s;';
         setTimeout(() => {
+            contentDescription.style.display = 'none';
+        }, 250);
+        setTimeout(() => {
             form.style.display = 'block';
         }, 300);
         setTimeout(()=>{
