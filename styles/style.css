@@ -1,0 +1,66 @@
+:root{
+    --primary-bg: rgb(123, 181, 172);
+    --secondary-bg: brown;
+    --primary-color: brown;
+    --secondary-color: brown;
+
+}
+@font-face{
+    font-family: Tajwal-font;
+    src: url(/font/Tajawal-Medium.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Tajwal-font;
+}
+/*Fonts*/
+.font10{
+    font-size: 10px;
+}
+.font13{
+    font-size: 13px;
+}
+.font15{
+    font-size: 15px;
+}
+.font20{
+    font-size: 20px;
+}
+.font30{
+    font-size: 30px;
+}
+/* Colors */
+.primary-bg{
+    background-color: var(--primary-bg);
+}
+
+a{
+    all: unset;
+}
+a:hover{
+    cursor: pointer;
+    color: initial;
+}
+
+
+
+/* Styles */
+#form{
+    display: none;
+    
+}
+.content-container{
+    display: flex;
+    height: 700px;
+}
+.content-container .right-side{
+    max-width: 50%;
+    flex-wrap: wrap;
+    /* border-left: 1px solid rgb(185, 186, 193); */
+}
+.content-container .left-side{
+    max-width: 50%;
+    flex-wrap: wrap;
+}
