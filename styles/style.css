@@ -1,5 +1,6 @@
 :root{
-    --primary-bg: rgb(123, 181, 172);
+    /* --primary-bg: rgb(123, 181, 172); */
+    --primary-bg: #3078e3;
     --secondary-bg: brown;
     --primary-color: brown;
     --secondary-color: brown;
@@ -44,7 +45,9 @@ a:hover{
     color: initial;
 }
 
-
+.light-bg{
+    background-color: #eaecee;
+}
 
 /* Styles */
 #form{
