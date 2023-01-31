@@ -17,6 +17,27 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+      let category;
+      let name;
+      let phone;
+      let details;
+
+    const sendRepair = ()=>{
+      const repair = document.getElementById("repair");
+      const repairName = document.getElementById("repairName");
+      const repairPhone = document.getElementById("repairPhone");
+      const repairDetails = document.getElementById("repairDetails");
+      const formId = document.getElementById("formId");
+      
+      category = repair.value;
+      name = repairName.value;
+      phone = repairPhone.value;
+      details = repairDetails.value;
+      var win = window.open(`https://wa.me/+966580332559?text=CategoryIs:%20${category}%20Nameis:%20${name}%20PhoneIs:%20${phone}%20DetailsIs:%20${details}%20`, '_blank');
+    }
+    </script>
   </head>
   <body>
     <!-- {{--Navbar--}} -->
@@ -56,6 +77,21 @@
               >
             </li>
             <li class="nav-item">
+              <a
+              aria-label="Chat on WhatsApp"
+              href="https://wa.me/+966580332559?text="
+              target="_blank"
+              class="nav-link active text-light"
+            >
+              تواصل معنا
+              <img
+                alt="Chat on WhatsApp"
+                src="./images/whatsapp-logo-nobg.png"
+                wclassth="20px"
+                height="20px"
+            /></a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link text-light" href="#sectionOne">صيانة واستشارات</a>
             </li>
             <li class="nav-item">
@@ -69,7 +105,7 @@
       </div>
     </nav>
     <!-- Main  -->
-    <main class="m-4 d-flex flex-column justify-content-around mt-5">
+    <main class="container mt-5">
         
       <header class="bg-warning p-5">
         <h1>هنا يتم وصف الدكت </h1>
@@ -96,24 +132,25 @@
                   للعميل
                 </h3>
               </div>
-              <form >
+              <form id="formId">
               <div class="form" style="opacity: 0; padding: 5px; display: none;">
                 <div>
                   <label for="">قسم الطلب </label><br />
                   <input
                     class="form-control"
                     type="text"
-                    value="صيانة واستشارات "
+                    value="reparing "
+                    id="repair"
                     disabled
                   />
                 </div>
                 <div>
                   <label for="">اسمك الكريم :</label><br />
-                  <input class="form-control" type="text" />
+                  <input class="form-control" type="text" id="repairName"/>
                 </div>
                 <div>
                   <label for="">رقم جوالك :</label><br />
-                  <input class="form-control" type="text" />
+                  <input class="form-control" type="text" id="repairPhone"/>
                 </div>
                 <div>
                   <label for="">تفاصيل الطلب :</label><br />
@@ -122,21 +159,30 @@
                       cols="20"
                       rows="10"
                       class="w-100 form-control"
+                      id="repairDetails"
                     ></textarea>
                   </div>
                 </div>
                 <a
+                id="reapirWhatsapp"
                   aria-label="Chat on WhatsApp"
-                  href="https://wa.me/+966580332559"
+                  
                   target="_blank"
+                  class="btn btn-outline-dark my-2"
+                  onclick="sendRepair()"
                 >
                   ارسال الطلب عبر الواتساب
-                  <img
-                    alt="Chat on WhatsApp"
-                    src="./images/whatsapp-logo-nobg.png"
-                    wclassth="30px"
-                    height="30px"
-                /></a>
+                </a>
+                  <script>
+                    // document.write("<a aria-label='Chat on WhatsApp' target='_blank' class='btn btn-outline-dark my-2' onclick='sendRepair()' href='https://wa.me/+966580332559?text="+message+" ' '> ارسال الطلب عبر الواتساب </a>");
+                    // document.write("<a aria-label='Chat on WhatsApp' target='_blank' class='btn btn-outline-dark my-2' onclick='sendRepair()' > ارسال الطلب عبر الواتساب </a>");
+                    </script>
+                <img
+                  alt="Chat on WhatsApp"
+                  src="./images/whatsapp-logo-nobg.png"
+                  wclassth="30px"
+                  height="30px"
+              />
                 <br />
             </div>
             <button class="showForm btn btn-outline-dark" style="opacity: 1" >
@@ -164,7 +210,7 @@
             <div class="left-side col-lg-5 m-2">
               <div class="contentDescription2" style="opacity: 1">
                 <h3 class="m-3">
-                  نسعد بخدمتكم لفك و تركيب جميع الاجهزة المنزلية : مكيفات - افران - ثلاجات  
+                   نسعد بخدمتكم لفك و تركيب جميع الاجهزة المنزلية : مكيفات - مكيفات سبلت - ثلاجات - غسالات
                 </h3>
               </div>
               <form >
@@ -196,18 +242,19 @@
                     ></textarea>
                   </div>
                 </div>
-                <a
+                  <a
                   aria-label="Chat on WhatsApp"
                   href="https://wa.me/+966580332559"
                   target="_blank"
-                >
+                  class="btn btn-outline-dark my-2"
+                  >
                   ارسال الطلب عبر الواتساب
                   <img
-                    alt="Chat on WhatsApp"
-                    src="./images/whatsapp-logo-nobg.png"
-                    wclassth="30px"
-                    height="30px"
-                /></a>
+                  alt="Chat on WhatsApp"
+                  src="./images/whatsapp-logo-nobg.png"
+                  wclassth="30px"
+                  height="30px"
+                  /></a>
                 <br />
             </div>
             <button class="showForm2 btn btn-outline-dark" style="opacity: 1" >
@@ -236,7 +283,7 @@
             <div class="left-side col-lg-5 m-2">
               <div class="contentDescription3" style="opacity: 1">
                 <h3 class="m-3">
-                  هنا نقدم خدمة تمديد الليّات - ليّات غاز - ليّ مكيّفات 
+                  هنا نقدم خدمة تمديد الليّات  - ليّ مكيّفات 
                 </h3>
               </div>
               <form >
@@ -272,6 +319,7 @@
                   aria-label="Chat on WhatsApp"
                   href="https://wa.me/+966580332559"
                   target="_blank"
+                  class="btn btn-outline-dark my-2"
                 >
                   ارسال الطلب عبر الواتساب
                   <img
@@ -291,21 +339,21 @@
           <!-- Main content end -->
         </section>
 
-
-        
-
     </main>
 
-    <footer class="bg-light text-center text-lg-start mt-5">
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © جميع الحقوق محفوظة
-        <a class="text-dark" href="#"
-          ><h5 class="d-inline">لمؤسسة تميز التكييف</h5></a
-        >
+    <footer class=" text-center text-lg-start mt-5 p-2" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="d-flex  justify-content-center ">
+        <h6 class=" d-flex align-items-center justify-content-center d-inline">
+          <a href="https://goo.gl/maps/w8MxT1Matjugo5N98" target="_blank">
+            © جميع الحقوق محفوظة
+            لمؤسسة تميز التكييف  
+            <i class="fa-solid fa-location-dot"></i></a>
+        </h6>
+
+     
       </div>
-      <!-- Copyright -->
     </footer>
+    
     <script src="./js/main.js"></script>
   </body>
 </html>
