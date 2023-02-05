@@ -128,3 +128,61 @@
     
 
     
+    // FORM Request Maintanence 
+
+
+    // let category;
+    // let uName;
+    // let mobile;
+    // let details;
+    
+    const genSend = (formId,formName,formMobile,formDetails) => {    
+
+        
+        const category = document.getElementById(formId.id).value;
+        const userName = document.getElementById(formName.id).value;
+        const userMobile = document.getElementById(formMobile.id).value;
+        const userDetails = document.getElementById(formDetails.id).value;
+        
+      // %0a = new line
+      // %20 = space
+      let urlNumber = `https://wa.me/+966580332559?text=الخدمة%20:%20${category}%0aالاسم%20:%20${userName}%0aرقم%20الجوال%20:%20${userMobile}%0aتفاصيل%20الطلب%20:%20${userDetails}%20`;
+      window.open(urlNumber, "_blank");
+    
+    }
+
+
+    // let category;
+    // let uName;
+    // let phone;
+    // let details;
+    
+    // const sendRepair = () => {
+    //   const repair = document.getElementById("repair");
+    //   const repairName = document.getElementById("repairName");
+    //   const repairPhone = document.getElementById("repairPhone");
+    //   const repairDetails = document.getElementById("repairDetails");
+    //   category = repair.value;
+    //   name = repairName.value;
+    //   phone = repairPhone.value;
+    //   details = repairDetails.value;
+    //   // %0a = new line
+    //   // %20 = space
+    //   let urlNumber = `https://wa.me/+966580332559?text=الخدمة%20:%20${category}%0aالاسم%20:%20${name}%0aرقم%20الجوال%20:%20${phone}%0aتفاصيل%20الطلب%20:%20${details}%20`;
+    //   window.open(urlNumber, "_blank");
+    // };
+
+    // const sendAssemble = () => {
+    //   const assemble = document.getElementById("assemble");
+    //   const assembleName = document.getElementById("assembleName");
+    //   const assemblePhone = document.getElementById("assemblePhone");
+    //   const assembleDetails = document.getElementById("assembleDetails");
+    //   category = assemble.value;
+    //   name = assembleName.value;
+    //   phone = assemblePhone.value;
+    //   details = assembleDetails.value;
+    //   // %0a = new line
+    //   // %20 = space
+    //   let urlNumber = `https://wa.me/+966580332559?text=الخدمة%20:%20${category}%0aالاسم%20:%20${name}%0aرقم%20الجوال%20:%20${phone}%0aتفاصيل%20الطلب%20:%20${details}%20`;
+    //   window.open(urlNumber, "_blank");
+    // };

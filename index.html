@@ -1,359 +1,311 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>التميز للتكييف</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script>
-      let category;
-      let name;
-      let phone;
-      let details;
 
-    const sendRepair = ()=>{
-      const repair = document.getElementById("repair");
-      const repairName = document.getElementById("repairName");
-      const repairPhone = document.getElementById("repairPhone");
-      const repairDetails = document.getElementById("repairDetails");
-      const formId = document.getElementById("formId");
-      
-      category = repair.value;
-      name = repairName.value;
-      phone = repairPhone.value;
-      details = repairDetails.value;
-      var win = window.open(`https://wa.me/+966580332559?text=CategoryIs:%20${category}%20Nameis:%20${name}%20PhoneIs:%20${phone}%20DetailsIs:%20${details}%20`, '_blank');
-    }
-    </script>
-  </head>
-  <body>
-    <!-- {{--Navbar--}} -->
-    <nav class="navbar navbar-expand-lg primary-bg p-0">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="my-2">
-          <div class="img-fluid">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التميز للتكييف</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- {{--Navbar--}} -->
+  <nav class="navbar navbar-expand-lg primary-bg p-0">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="my-2">
+        <div class="img-fluid">
           <span class="text-light">تميز التكييف</span>
-            <img
-            src="./images/air-cooler.png"
-            alt=""
-            srcset=""
-            width="40px"
-            height="40px"
-            />
-          </div>
-        </div>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav w-50 d-flex justify-content-around">
-            <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#"
-                >الرئيسية</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-              aria-label="Chat on WhatsApp"
-              href="https://wa.me/+966580332559?text="
-              target="_blank"
-              class="nav-link active text-light"
-            >
-              تواصل معنا
-              <img
-                alt="Chat on WhatsApp"
-                src="./images/whatsapp-logo-nobg.png"
-                wclassth="20px"
-                height="20px"
-            /></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#sectionOne">صيانة واستشارات</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#sectionTwo"> فك وتركيب </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#sectionThree"> تمديد </a>
-            </li>
-          </ul>
+          <img src="./images/air-cooler.png" alt="" srcset="" width="40px" height="40px" />
         </div>
       </div>
-    </nav>
-    <!-- Main  -->
-    <main class="container mt-5">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav w-50 d-flex justify-content-around">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/+966580332559?text=" target="_blank"
+              class="nav-link active text-light">
+              تواصل معنا
+              <img alt="Chat on WhatsApp" src="./images/whatsapp-logo-nobg.png" wclassth="20px" height="20px" /></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#sectionOne">صيانة واستشارات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#sectionTwo"> فك وتركيب </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#sectionThree"> تمديد </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main  -->
+  <main class="container mt-5">
+    <header class="bg-warning ">
+      <section id="sectionDuct">
+        <h2 class="mt-4 mr-2 light-bg p-2 text-center"> تمديد مجاري هواء مسبقة العزل<br>  ( دكت ) </h2>
         
-      <header class="bg-warning p-5">
-        <h1>هنا يتم وصف الدكت </h1>
-      </header>
-      <section id="sectionOne" >
-          <h4 class="mt-4 mr-2 light-bg  p-2"><span>|</span> صيانة واستشارات</h4>
-          <div
-            class=" main-content d-flex flex-row flex-wrap justify-content-start"
-          >
-            <div class="right-side col-lg-5 m-2">
-              <div>
-                <img
-                  src="./images/15016.jpg"
-                  alt="maintenance image"
-                  class="img-fluid"
-                />
+        <h6 class="mt-2 mr-2 light-bg p-2 text-center"> نقله نوعيه في مجال التكييف ، كل المميزات في منتج واحد  </h6>
+        
+        <div class="main-content d-flex flex-column flex-wrap justify-content-start">
+          <div class="right-side col-md-10 col-12 m-auto">
+            <div class="  bg-danger col-md-8  col-10 m-auto">
+              <!-- Carousel  -->
+              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./images/15016.jpg" class="d-block w-100 img-fluid max-h-50" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./images/24762.jpg" class="d-block w-100 img-fluid max-h-50" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/4282623.jpg" class="d-block w-100 img-fluid max-h-50" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!-- Carousel End  -->
+            </div>
+          </div>
+          <div class="left-side col-lg-12 m-2">
+            <div class="contentDescription" style="opacity: 1">
+              <div class="row justify-content-center">
+                <span class="text-center col-lg-3 col-md-3 col-5 m-1"> <i class="fa fa-check" aria-hidden="true"></i> عازل حراري </span>
+                <span class="text-center col-lg-3 col-md-3 col-5 m-1"> <i class="fa fa-check" aria-hidden="true"></i> مانع للحرائق</span>
+                <span class="text-center col-lg-3 col-md-3 col-5 m-1"> <i class="fa fa-check" aria-hidden="true"></i> كاتم للصوت</span>
+                <span class="text-center col-lg-3 col-md-3 col-5 m-1"> <i class="fa fa-check" aria-hidden="true"></i> توفير للطاقه</span>
+                <span class="text-center col-lg-3 col-md-3 col-5 m-1"> <i class="fa fa-check" aria-hidden="true"></i> صديق للبيئة</span>
+                <span class="text-center col-lg-3 col-md-3 col-5 m-1"> <i class="fa fa-check" aria-hidden="true"></i> جودة الهواء</span>
+                <span class="text-center col-lg-3 col-md-3 col-5 m-1"> <i class="fa fa-check" aria-hidden="true"></i> خفيف الوزن </span>
+                <span class="text-center col-lg-3 col-md-3 col-5 m-1"> <i class="fa fa-check" aria-hidden="true"></i> سريع التركيب </span>
+                <span class="text-center col-lg-3 col-md-3 col-5 m-1"> <i class="fa fa-check" aria-hidden="true"></i> سهل التنظيف</span>
               </div>
             </div>
-            <div class="left-side col-lg-5 m-2">
-              <div class="contentDescription" style="opacity: 1">
-                <h3 class="m-3">
-                  صيانة واستشارات فيما يخص الاجهزة الكهربائية المنزلية ونحرص على
-                  تقديم الاستشارة اللازمة والصحيحة اولا لضمان الخدمة المقدمة
-                  للعميل
-                </h3>
-              </div>
-              <form id="formId">
-              <div class="form" style="opacity: 0; padding: 5px; display: none;">
+            <form>
+              <div class="form" style="opacity: 0; padding: 5px; display: none">
                 <div>
                   <label for="">قسم الطلب </label><br />
-                  <input
-                    class="form-control"
-                    type="text"
-                    value="reparing "
-                    id="repair"
-                    disabled
-                  />
+                  <input class="form-control" type="text" value="دكت" id="duct" disabled />
                 </div>
                 <div>
                   <label for="">اسمك الكريم :</label><br />
-                  <input class="form-control" type="text" id="repairName"/>
+                  <input class="userName form-control" type="text" id="ductName" />
                 </div>
                 <div>
                   <label for="">رقم جوالك :</label><br />
-                  <input class="form-control" type="text" id="repairPhone"/>
+                  <input class="userMobile form-control" type="text" id="ductMobile"/>
                 </div>
                 <div>
                   <label for="">تفاصيل الطلب :</label><br />
                   <div>
-                    <textarea
-                      cols="20"
-                      rows="10"
-                      class="w-100 form-control"
-                      id="repairDetails"
-                    ></textarea>
+                    <textarea cols="20" rows="10" class="userDetails w-100 form-control" id="ductDetails"></textarea>
                   </div>
                 </div>
-                <a
-                id="reapirWhatsapp"
-                  aria-label="Chat on WhatsApp"
-                  
-                  target="_blank"
-                  class="btn btn-outline-dark my-2"
-                  onclick="sendRepair()"
-                >
+                <a id="ductWhatsapp" aria-label="Chat on WhatsApp" target="_blank" class="btn btn-outline-dark my-2"
+                  onclick="genSend(duct,ductName,ductMobile,ductDetails)">
                   ارسال الطلب عبر الواتساب
                 </a>
-                  <script>
-                    // document.write("<a aria-label='Chat on WhatsApp' target='_blank' class='btn btn-outline-dark my-2' onclick='sendRepair()' href='https://wa.me/+966580332559?text="+message+" ' '> ارسال الطلب عبر الواتساب </a>");
-                    // document.write("<a aria-label='Chat on WhatsApp' target='_blank' class='btn btn-outline-dark my-2' onclick='sendRepair()' > ارسال الطلب عبر الواتساب </a>");
-                    </script>
-                <img
-                  alt="Chat on WhatsApp"
-                  src="./images/whatsapp-logo-nobg.png"
-                  wclassth="30px"
-                  height="30px"
-              />
+                <img alt="Chat on WhatsApp" src="./images/whatsapp-logo-nobg.png" wclassth="30px" height="30px" />
                 <br />
+              </div>
+              <button class="showForm btn btn-outline-dark" style="opacity: 1">
+                طلب خدمة
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </header>
+    
+
+    <section id="sectionOne">
+      <h4 class="mt-4 mr-2 light-bg p-2"><span>|</span> صيانة واستشارات</h4>
+      <div class="main-content d-flex flex-row flex-wrap justify-content-start">
+        <div class="right-side col-lg-5 m-2">
+          <div>
+            <img src="./images/15016.jpg" alt="maintenance image" class="img-fluid" />
+          </div>
+        </div>
+        <div class="left-side col-lg-5 m-2">
+          <div class="contentDescription" style="opacity: 1">
+            <h3 class="m-3">
+              صيانة واستشارات فيما يخص الاجهزة الكهربائية المنزلية ونحرص على
+              تقديم الاستشارة اللازمة والصحيحة اولا لضمان الخدمة المقدمة
+              للعميل
+            </h3>
+          </div>
+          <form>
+            <div class="form" style="opacity: 0; padding: 5px; display: none">
+              <div>
+                <label for="">قسم الطلب </label><br />
+                <input class="form-control" type="text" value="صيانة و استشارات" id="repair" disabled />
+              </div>
+              <div>
+                <label for="">اسمك الكريم :</label><br />
+                <input class="userName form-control" type="text" id="repairName" />
+              </div>
+              <div>
+                <label for="">رقم جوالك :</label><br />
+                <input class="userMobile form-control" type="text" id="repairMobile"/>
+              </div>
+              <div>
+                <label for="">تفاصيل الطلب :</label><br />
+                <div>
+                  <textarea cols="20" rows="10" class="userDetails w-100 form-control" id="repairDetails"></textarea>
+                </div>
+              </div>
+              <a id="reapirWhatsapp" aria-label="Chat on WhatsApp" target="_blank" class="btn btn-outline-dark my-2"
+                onclick="genSend(repair,repairName,repairMobile,repairDetails)">
+                ارسال الطلب عبر الواتساب
+              </a>
+              <img alt="Chat on WhatsApp" src="./images/whatsapp-logo-nobg.png" wclassth="30px" height="30px" />
+              <br />
             </div>
-            <button class="showForm btn btn-outline-dark" style="opacity: 1" >
+            <button class="showForm btn btn-outline-dark" style="opacity: 1">
               طلب خدمة
             </button>
-        </form>
-            </div>
-          </div>
-          <!-- Main content end -->
-        </section>
-      <section id="sectionTwo" >
-          <h4 class="mt-4 mr-2 light-bg  p-2"><span>|</span> فك و تركيب </h4>
-          <div
-            class=" main-content d-flex flex-row flex-wrap justify-content-start"
-          >
-            <div class="right-side col-lg-5 m-2">
-              <div>
-                <img
-                  src="./images/4282623.jpg"
-                  alt="maintenance image"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="left-side col-lg-5 m-2">
-              <div class="contentDescription2" style="opacity: 1">
-                <h3 class="m-3">
-                   نسعد بخدمتكم لفك و تركيب جميع الاجهزة المنزلية : مكيفات - مكيفات سبلت - ثلاجات - غسالات
-                </h3>
-              </div>
-              <form >
-              <div class="form2" style="opacity: 0; padding: 5px; display: none;">
-                <div>
-                  <label for="">قسم الطلب </label><br />
-                  <input
-                    class="form-control"
-                    type="text"
-                    value="فك و تركيب"
-                    disabled
-                  />
-                </div>
-                <div>
-                  <label for="">اسمك الكريم :</label><br />
-                  <input class="form-control" type="text" />
-                </div>
-                <div>
-                  <label for="">رقم جوالك :</label><br />
-                  <input class="form-control" type="text" />
-                </div>
-                <div>
-                  <label for="">تفاصيل الطلب :</label><br />
-                  <div>
-                    <textarea
-                      cols="20"
-                      rows="10"
-                      class="w-100 form-control"
-                    ></textarea>
-                  </div>
-                </div>
-                  <a
-                  aria-label="Chat on WhatsApp"
-                  href="https://wa.me/+966580332559"
-                  target="_blank"
-                  class="btn btn-outline-dark my-2"
-                  >
-                  ارسال الطلب عبر الواتساب
-                  <img
-                  alt="Chat on WhatsApp"
-                  src="./images/whatsapp-logo-nobg.png"
-                  wclassth="30px"
-                  height="30px"
-                  /></a>
-                <br />
-            </div>
-            <button class="showForm2 btn btn-outline-dark" style="opacity: 1" >
-                طلب خدمة
-              </button>
-        </form>
-            </div>
-          </div>
-          <!-- Main content end -->
-        </section>
-        
-      <section id="sectionThree" >
-          <h4 class="mt-4 mr-2 light-bg  p-2"><span>|</span> تمديد  </h4>
-          <div
-            class=" main-content d-flex flex-row flex-wrap justify-content-start"
-          >
-            <div class="right-side col-lg-5 m-2">
-              <div>
-                <img
-                  src="./images/24762.jpg"
-                  alt="maintenance image"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div class="left-side col-lg-5 m-2">
-              <div class="contentDescription3" style="opacity: 1">
-                <h3 class="m-3">
-                  هنا نقدم خدمة تمديد الليّات  - ليّ مكيّفات 
-                </h3>
-              </div>
-              <form >
-              <div class="form3" style="opacity: 0; padding: 5px; display: none;">
-                <div>
-                  <label for="">قسم الطلب </label><br />
-                  <input
-                    class="form-control"
-                    type="text"
-                    value="تمديد"
-                    disabled
-                  />
-                </div>
-                <div>
-                  <label for="">اسمك الكريم :</label><br />
-                  <input class="form-control" type="text" />
-                </div>
-                <div>
-                  <label for="">رقم جوالك :</label><br />
-                  <input class="form-control" type="text" />
-                </div>
-                <div>
-                  <label for="">تفاصيل الطلب :</label><br />
-                  <div>
-                    <textarea
-                      cols="20"
-                      rows="10"
-                      class="w-100 form-control"
-                    ></textarea>
-                  </div>
-                </div>
-                <a
-                  aria-label="Chat on WhatsApp"
-                  href="https://wa.me/+966580332559"
-                  target="_blank"
-                  class="btn btn-outline-dark my-2"
-                >
-                  ارسال الطلب عبر الواتساب
-                  <img
-                    alt="Chat on WhatsApp"
-                    src="./images/whatsapp-logo-nobg.png"
-                    wclassth="30px"
-                    height="30px"
-                /></a>
-                <br />
-            </div>
-            <button class="showForm3 btn btn-outline-dark" style="opacity: 1" >
-                طلب خدمة
-              </button>
-        </form>
-            </div>
-          </div>
-          <!-- Main content end -->
-        </section>
-
-    </main>
-
-    <footer class=" text-center text-lg-start mt-5 p-2" style="background-color: rgba(0, 0, 0, 0.2)">
-      <div class="d-flex  justify-content-center ">
-        <h6 class=" d-flex align-items-center justify-content-center d-inline">
-          <a href="https://goo.gl/maps/w8MxT1Matjugo5N98" target="_blank">
-            © جميع الحقوق محفوظة
-            لمؤسسة تميز التكييف  
-            <i class="fa-solid fa-location-dot"></i></a>
-        </h6>
-
-     
+          </form>
+        </div>
       </div>
-    </footer>
-    
-    <script src="./js/main.js"></script>
-  </body>
+    </section>
+    <section id="sectionTwo">
+      <h4 class="mt-4 mr-2 light-bg p-2"><span>|</span> فك و تركيب</h4>
+      <div class="main-content d-flex flex-row flex-wrap justify-content-start">
+        <div class="right-side col-lg-5 m-2">
+          <div>
+            <img src="./images/4282623.jpg" alt="maintenance image" class="img-fluid" />
+          </div>
+        </div>
+        <div class="left-side col-lg-5 m-2">
+          <div class="contentDescription2" style="opacity: 1">
+            <h3 class="m-3">
+              نسعد بخدمتكم لفك و تركيب جميع الاجهزة المنزلية : مكيفات - مكيفات
+              سبلت - ثلاجات - غسالات
+            </h3>
+          </div>
+          <form>
+            <div class="form2" style="opacity: 0; padding: 5px; display: none">
+              <div>
+                <label for="">قسم الطلب </label><br />
+                <input class="form-control" type="text" value="فك و تركيب" disabled id="assemble"/>
+              </div>
+              <div>
+                <label for="">اسمك الكريم :</label><br />
+                <input class="form-control" type="text" id="assembleName"/>
+              </div>
+              <div>
+                <label for="">رقم جوالك :</label><br />
+                <input class="form-control" type="text" id="assembleMobile" />
+              </div>
+              <div>
+                <label for="">تفاصيل الطلب :</label><br />
+                <div>
+                  <textarea cols="20" rows="10" class="w-100 form-control" id="assembleDetails"></textarea>
+                </div>
+              </div>
+              <a id="assembleWhatsapp" aria-label="Chat on WhatsApp" target="_blank" class="btn btn-outline-dark my-2"
+              onclick="genSend(assemble,assembleName,assembleMobile,assembleDetails)">
+                ارسال الطلب عبر الواتساب
+              </a>
+              <img alt="Chat on WhatsApp" src="./images/whatsapp-logo-nobg.png" wclassth="30px" height="30px" />
+              <br />
+            </div>
+            <button class="showForm2 btn btn-outline-dark" style="opacity: 1">
+              طلب خدمة
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="sectionThree">
+      <h4 class="mt-4 mr-2 light-bg p-2"><span>|</span> تمديد</h4>
+      <div class="main-content d-flex flex-row flex-wrap justify-content-start">
+        <div class="right-side col-lg-5 m-2">
+          <div>
+            <img src="./images/24762.jpg" alt="maintenance image" class="img-fluid" />
+          </div>
+        </div>
+        <div class="left-side col-lg-5 m-2">
+          <div class="contentDescription3" style="opacity: 1">
+            <h3 class="m-3">هنا نقدم خدمة تمديد الليّات - ليّ مكيّفات</h3>
+          </div>
+          <form>
+            <div class="form3" style="opacity: 0; padding: 5px; display: none">
+              <div>
+                <label for="">قسم الطلب </label><br />
+                <input class="form-control" type="text" value="تمديد" disabled />
+              </div>
+              <div>
+                <label for="">اسمك الكريم :</label><br />
+                <input class="form-control" type="text" />
+              </div>
+              <div>
+                <label for="">رقم جوالك :</label><br />
+                <input class="form-control" type="text" />
+              </div>
+              <div>
+                <label for="">تفاصيل الطلب :</label><br />
+                <div>
+                  <textarea cols="20" rows="10" class="w-100 form-control"></textarea>
+                </div>
+              </div>
+              <a aria-label="Chat on WhatsApp" href="https://wa.me/+966580332559" target="_blank"
+                class="btn btn-outline-dark my-2">
+                ارسال الطلب عبر الواتساب
+                <img alt="Chat on WhatsApp" src="./images/whatsapp-logo-nobg.png" wclassth="30px" height="30px" /></a>
+              <br />
+            </div>
+            <button class="showForm3 btn btn-outline-dark" style="opacity: 1">
+              طلب خدمة
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Main content end -->
+    </section>
+  </main>
+
+  <footer class="text-center text-lg-start mt-5 p-2" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="d-flex justify-content-center">
+      <h6 class="d-flex align-items-center justify-content-center d-inline">
+        <a href="https://goo.gl/maps/w8MxT1Matjugo5N98" target="_blank">
+          © جميع الحقوق محفوظة لمؤسسة تميز التكييف
+          <i class="fa-solid fa-location-dot"></i></a>
+      </h6>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

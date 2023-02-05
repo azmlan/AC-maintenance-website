@@ -67,3 +67,6 @@ a:hover{
     max-width: 50%;
     flex-wrap: wrap;
 }
+.max-h-50{
+    max-height: 300px;
+}
