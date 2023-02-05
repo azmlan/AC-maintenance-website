@@ -1,9 +1,14 @@
 :root{
     /* --primary-bg: rgb(123, 181, 172); */
-    --primary-bg: #3078e3;
-    --secondary-bg: brown;
-    --primary-color: brown;
-    --secondary-color: brown;
+    /* --primary-bg: #3078e3; */
+    /* Backgrounds */
+    --primary-bg: #193e6a;
+    --secondary-bg: #8dbac7;
+    --light-primary-bg: #193e6a2a;
+    --light-secondary-bg: #8dbac77a;
+    /* Colors */
+    --primary-color: #193e6a;
+    --secondary-color: #8dbac7;
 
 }
 @font-face{
@@ -35,6 +40,15 @@
 /* Colors */
 .primary-bg{
     background-color: var(--primary-bg);
+}
+.light-primary-bg{
+    background-color: var(--light-primary-bg);
+}
+.secondary-bg{
+    background-color: var(--secondary-bg);
+}
+.light-secondary-bg{
+    background-color: var(--light-secondary-bg);
 }
 
 a{
@@ -69,4 +83,17 @@ a:hover{
 }
 .max-h-50{
     max-height: 300px;
+}
+.radius-5{
+    border-radius: 5px;
+}
+.radius-100{
+    border-radius: 100%;
+    padding: 10px;
+}
+.min-h-300px{
+    min-height: 300px;
+}
+.min-h-100{
+min-height: 100%;
 }

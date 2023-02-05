@@ -1,4 +1,54 @@
 
+
+const showDuctForm = document.querySelector(".showDuctForm");
+const ductForm = document.querySelector(".ductForm");
+const ductDescription = document.querySelector(".ductDescription");
+const ductModalBtn = document.getElementById("ductModalBtn");
+showDuctForm.addEventListener('click', (e) => {        
+    e.preventDefault();
+    if (ductForm.style.opacity === '0') {
+        console.log('if');
+        // 👇️ this SHOWS the form
+        ductDescription.style.cssText = 'opacity:0; transition:0.2s;';
+        showDuctForm.style.cssText = 'opacity:0; transition:0.2s;';
+        ductModalBtn.style.cssText = 'opacity:0; transition:0.2s;';
+        setTimeout(() => {
+            ductDescription.style.display = 'none';
+            ductModalBtn.style.display = 'none';
+            
+        }, 250);
+        setTimeout(() => {
+            ductForm.style.display = 'block';
+        }, 300);
+        setTimeout(()=>{
+            ductForm.style.cssText = 'opacity:1; transition:0.2s;';
+            showDuctForm.innerText = "الغاء طلب";
+            showDuctForm.style.cssText = 'opacity:1;';
+            
+        },350)
+        
+        
+    } else if(ductForm.style.opacity === '1') {
+        console.log('else if');
+        // 👇️ this HIDES the form
+            ductForm.style.cssText = 'opacity:0 ; transition:0.4s;';
+            showDuctForm.style.cssText = 'opacity:0 ; transition:0.4s;';
+            setTimeout(() => {
+                ductForm.style.display ='none';
+                ductDescription.style.cssText = 'opacity:1; transition:0.5s;';
+                showDuctForm.style.cssText = 'opacity:1 ; transition:0.4s;';
+                ductModalBtn.style.cssText = 'opacity:1 ; transition:0.4s;';
+                showDuctForm.innerText = "طلب خدمة";
+                ductModalBtn.style.display = 'block';
+            }, 400);
+    }
+  });
+///////
+  if (ductForm.style.opacity === '0'){
+    ductForm.style.display = 'none';
+}
+
+
     const showForm = document.querySelector(".showForm");
     const form = document.querySelector(".form");
     const contentDescription = document.querySelector(".contentDescription");
@@ -127,15 +177,7 @@
     }
     
 
-    
-    // FORM Request Maintanence 
-
-
-    // let category;
-    // let uName;
-    // let mobile;
-    // let details;
-    
+// Open Whatsapp 
     const genSend = (formId,formName,formMobile,formDetails) => {    
 
         
@@ -143,7 +185,6 @@
         const userName = document.getElementById(formName.id).value;
         const userMobile = document.getElementById(formMobile.id).value;
         const userDetails = document.getElementById(formDetails.id).value;
-        
       // %0a = new line
       // %20 = space
       let urlNumber = `https://wa.me/+966580332559?text=الخدمة%20:%20${category}%0aالاسم%20:%20${userName}%0aرقم%20الجوال%20:%20${userMobile}%0aتفاصيل%20الطلب%20:%20${userDetails}%20`;
@@ -151,38 +192,3 @@
     
     }
 
-
-    // let category;
-    // let uName;
-    // let phone;
-    // let details;
-    
-    // const sendRepair = () => {
-    //   const repair = document.getElementById("repair");
-    //   const repairName = document.getElementById("repairName");
-    //   const repairPhone = document.getElementById("repairPhone");
-    //   const repairDetails = document.getElementById("repairDetails");
-    //   category = repair.value;
-    //   name = repairName.value;
-    //   phone = repairPhone.value;
-    //   details = repairDetails.value;
-    //   // %0a = new line
-    //   // %20 = space
-    //   let urlNumber = `https://wa.me/+966580332559?text=الخدمة%20:%20${category}%0aالاسم%20:%20${name}%0aرقم%20الجوال%20:%20${phone}%0aتفاصيل%20الطلب%20:%20${details}%20`;
-    //   window.open(urlNumber, "_blank");
-    // };
-
-    // const sendAssemble = () => {
-    //   const assemble = document.getElementById("assemble");
-    //   const assembleName = document.getElementById("assembleName");
-    //   const assemblePhone = document.getElementById("assemblePhone");
-    //   const assembleDetails = document.getElementById("assembleDetails");
-    //   category = assemble.value;
-    //   name = assembleName.value;
-    //   phone = assemblePhone.value;
-    //   details = assembleDetails.value;
-    //   // %0a = new line
-    //   // %20 = space
-    //   let urlNumber = `https://wa.me/+966580332559?text=الخدمة%20:%20${category}%0aالاسم%20:%20${name}%0aرقم%20الجوال%20:%20${phone}%0aتفاصيل%20الطلب%20:%20${details}%20`;
-    //   window.open(urlNumber, "_blank");
-    // };
