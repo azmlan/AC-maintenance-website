@@ -30,7 +30,7 @@
       <div class="my-2">
         <div class="img-fluid">
           <span class="text-light">تميز التكييف</span>
-          <img src="./images/logo.jpeg" alt="" srcset="" width="80px" height="80px" />
+          <img src="./images/logo-nobg.png" alt="" srcset="" width="80px" height="80px" />
         </div>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -139,7 +139,7 @@
             </div>
 
             <div class="container d-flex justify-content-between">
-              <form>
+              <form class="col-6">
                 <div class="ductForm" style="opacity: 0; padding: 5px; display: none">
                   <div>
                     <label for="">قسم الطلب </label><br />
@@ -166,7 +166,7 @@
                   <img alt="Chat on WhatsApp" src="./images/whatsapp-logo-nobg.png" wclassth="30px" height="30px" />
                   <br />
                 </div>
-                <button class="showDuctForm btn btn-outline-dark" style="opacity: 1">
+                <button class="showDuctForm btn btn-outline-dark " style="opacity: 1">
                   طلب خدمة
                 </button>
               </form>
@@ -326,27 +326,28 @@
             <div class="form3" style="opacity: 0; padding: 5px; display: none">
               <div>
                 <label for="">قسم الطلب </label><br />
-                <input class="form-control" type="text" value="تمديد" disabled />
+                <input class="form-control" type="text" value="تمديد" disabled  id="tmdeed"/>
               </div>
               <div>
                 <label for="">اسمك الكريم :</label><br />
-                <input class="form-control" type="text" />
+                <input class="form-control" type="text" id="tmdeedName"/>
               </div>
               <div>
                 <label for="">رقم جوالك :</label><br />
-                <input class="form-control" type="text" />
+                <input class="form-control" type="text" id="tmdeedMobile"/>
               </div>
               <div>
                 <label for="">تفاصيل الطلب :</label><br />
                 <div>
-                  <textarea cols="20" rows="10" class="w-100 form-control"></textarea>
+                  <textarea cols="20" rows="10" class="w-100 form-control" id="tmdeedDetails"></textarea>
                 </div>
               </div>
-              <a aria-label="Chat on WhatsApp" href="https://wa.me/+966580332559" target="_blank"
-                class="btn btn-outline-dark my-2">
-                ارسال الطلب عبر الواتساب
-                <img alt="Chat on WhatsApp" src="./images/whatsapp-logo-nobg.png" wclassth="30px" height="30px" /></a>
-              <br />
+              <a id="assembleWhatsapp" aria-label="Chat on WhatsApp" target="_blank" class="btn btn-outline-dark my-2"
+              onclick="genSend(tmdeed,tmdeedName,tmdeedMobile,tmdeedDetails)">
+              ارسال الطلب عبر الواتساب
+            </a>
+            <img alt="Chat on WhatsApp" src="./images/whatsapp-logo-nobg.png" wclassth="30px" height="30px" />
+            <br />
             </div>
             <button class="showForm3 btn btn-outline-dark" style="opacity: 1">
               طلب خدمة
