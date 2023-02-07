@@ -1,7 +1,4 @@
 :root{
-    /* --primary-bg: rgb(123, 181, 172); */
-    /* --primary-bg: #3078e3; */
-    /* Backgrounds */
     --primary-bg: #193e6a;
     --secondary-bg: #8dbac7;
     --light-primary-bg: #193e6a2a;
@@ -75,7 +72,6 @@ a:hover{
 .content-container .right-side{
     max-width: 50%;
     flex-wrap: wrap;
-    /* border-left: 1px solid rgb(185, 186, 193); */
 }
 .content-container .left-side{
     max-width: 50%;
